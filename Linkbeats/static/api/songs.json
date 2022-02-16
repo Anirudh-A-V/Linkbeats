@@ -1,0 +1,212 @@
+{
+  "Classic rock": [
+    {
+      "name": "Sweet Child O'Mine",
+      "Artist": "Guns N'Roses"
+    },
+    {
+      "name": "Stairway to Heaven",
+      "Artist":"Led Zeppelin"
+    },
+    {
+      "name": "Bohemian Rhapsody",
+      "Artist":"Queen"
+    },
+    {
+      "name": "Hotel California",
+      "Artist":"Eagles"
+    },
+    {
+      "name": "Kashmir",
+      "Artist":"Led Zeppelin"
+    },
+    {
+      "name": "While My Guitar Gently Weeps",
+      "Artist":"Beatles"
+    },
+    {
+      "name": "Comfortably Numb",
+      "Artist":"Pink Floyd"
+    },
+    {
+      "name": "Hey Jude",
+      "Artist":"Beatles"
+    },
+    {
+      "name": "Sultans of Swing",
+      "Artist":"Dire Straits"
+    },
+    {
+      "name": "A Day in the Life",
+      "Artist":"Beatles"
+    }
+  ],
+  "rap": [
+    {
+      "name": "Rap God",
+      "Artist": "Eminem"
+    },
+    {
+      "name": "Mom's Spaghetti",
+      "Artist": "Eminem"
+    },
+    {
+      "name": "The Box",
+      "Artist": "Roddy Ricch"
+    },
+    {
+      "name": "Astronaut in The Ocean",
+      "Artist": "Masked Wolf"
+    },
+    {
+      "name": "God's Plan",
+      "Artist": "Drakw"
+    },
+    {
+      "name": "Hotline Bling",
+      "Artist": "Drake"
+    },
+    {
+      "name": "Without Me",
+      "Artist": "Eminem"
+    },
+    {
+      "name": "1-800-273-8255 ",
+      "Artist": "Logic"
+    },
+    {
+      "name": "Homicide",
+      "Artist": "Logic ft.Eminem"
+    },
+    {
+      "name": "Blueberry Faygo",
+      "Artist": "Lil Moseley"
+    },
+  ],
+  "edm": [
+    {
+      "name": "The Nightts",
+      "Artist": "Avicii"
+    },
+    {
+      "name": "Levels",
+      "Artist": "Avicii"
+    },
+    {
+      "name": "Wake Me Up",
+      "Artist": "Avicii"
+    },
+    {
+      "name": "Faded",
+      "Artist": "Alan Walker"
+    },
+    {
+      "name": "Titanium  ",
+      "Artist": "David Guetta ft. Sia"
+    },
+    {
+      "name": "Animals",
+      "Artist": "Martin Garrix"
+    },
+    {
+      "name": "Digital Love",
+      "Artist": "Daft Punk"
+    },
+    {
+      "name": "Summer ",
+      "Artist": "Calvin Harris"
+    },
+    {
+      "name": "Bangarang",
+      "Artist": "SKRILLEX"
+    },
+    {
+      "name": "Turn Down for What",
+      "Artist": "DJ Snake, Lil Jon"
+    },
+  ],
+  "pop": [
+    {
+      "name": "Bad Guy",
+      "Artist": "Billie Eilish"
+    },
+    {
+      "name": "Blinding Lights",
+      "Artist": "Weeknd"
+    },
+    {
+      "name": "Happy",
+      "Artist": "Pharell Willaims"
+    },
+    {
+      "name": "Shape of You",
+      "Artist": "Ed Sheeran"
+    },
+    {
+      "name": "Moves like Jagger",
+      "Artist": "Maroon 5"
+    },
+    {
+      "name": "I Want it That Way",
+      "Artist": "Backstreet Boys"
+    },
+    {
+      "name": "Uptown Funk",
+      "Artist": ""
+    },
+    {
+      "name": "Counting Stars",
+      "Artist": "One Republic"
+    },
+    {
+      "name": "Hips Don't Lie",
+      "Artist": "Shakira "
+    },
+    {
+      "name": "Adore You",
+      "Artist": "Harry Styles"
+    },
+  ],
+  "Indie": [
+    {
+      "name": "Are You Bored Yet?",
+      "Artist": "Wallows"
+    },
+    {
+      "name": "Feels Like Summer",
+      "Artist": "Childish Gambino"
+    },
+    {
+      "name": "Kids",
+      "Artist": "MGMT"
+    },
+    {
+      "name": "Last Nite",
+      "Artist": "The Strokes"
+    },
+    {
+      "name": "A-Punk",
+      "Artist": "Vampire Weeknd"
+    },
+    {
+      "name": "Somebody Else",
+      "Artist": "1975"
+    },
+    {
+      "name": "Midnight City",
+      "Artist": "M83"
+    },
+    {
+      "name": "Water",
+      "Artist": "Ra Ra Riot"
+    },
+    {
+      "name": "Crystalised",
+      "Artist": "The xx"
+    },
+    {
+      "name": "Breezeblocks",
+      "Artist": "alt-J"
+    },
+  ]
+}

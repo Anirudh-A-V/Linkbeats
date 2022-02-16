@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{usr}}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link href="{{ url_for('static',filename='styles/userstyle.css') }}" rel="stylesheet" type="text/css" />
+
+
+    </head>
+
+
+
+
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Linkbeats</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/songs">Songs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./user">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./logout">Log out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+        <section class="header">
+
+
+
+            <div class="page-flows">
+
+                <span class="flow">
+                    <i class="ion-chevron-left"></i>
+                </span>
+
+                <span class="flow">
+                    <i class="ion-chevron-right disabled"></i>
+                </span>
+
+            </div>
+
+            <div class="search">
+
+                <input type="text" placeholder="Search" />
+
+            </div>
+
+            <div class="user">
+
+                <div class="user__notifications">
+
+
+
+                </div>
+
+                <div class="user__inbox">
+
+
+                </div>
+
+                <div class="user__info">
+
+                    <span class="user__info__img">
+
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/adam_proPic.jpg"
+                            alt="Profile Picture" class="img-responsive" />
+
+                    </span>
+
+                    <span class="user__info__name">
+
+                        <span class="first">Adam</span>
+
+                        <span class="last">Lowenthal</span>
+
+                    </span>
+
+                </div>
+
+                <div class="user__actions">
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                            <i class="ion-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Private Session</a></li>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="content">
+
+            <div class="content__left">
+
+                <section class="navigation">
+
+                    <!-- Main -->
+                    <div class="navigation__list">
+
+                        <div class="navigation__list__header" role="button" data-toggle="collapse" href="#main"
+                            aria-expanded="true" aria-controls="main">
+                            Main
+                        </div>
+
+                        <div class="collapse in" id="main">
+
+                            <a href="#" class="navigation__list__item">
+                                <i class="ion-ios-browsers"></i>
+                                <span>Browse</span>
+                            </a>
+
+                            <a href="#" class="navigation__list__item">
+                                <i class="ion-person-stalker"></i>
+                                <span>Activity</span>
+                            </a>
+
+                            <a href="#" class="navigation__list__item">
+                                <i class="ion-radio-waves"></i>
+                                <span>Radio</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <!-- / -->
+
+                    <!-- Your Music -->
+                    <div class="navigation__list">
+
+                        <div class="navigation__list__header" role="button" data-toggle="collapse" href="#yourMusic"
+                            aria-expanded="true" aria-controls="yourMusic">
+                            Your Music
+                        </div>
+
+                        <div class="collapse in" id="yourMusic">
+
+                            <a href="#" class="navigation__list__item">
+                                <i class="ion-headphone"></i>
+                                <span>Songs</span>
+                            </a>
+
+                            <a href="#" class="navigation__list__item">
+                                <i class="ion-ios-musical-notes"></i>
+                                <span>Albums</span>
+                            </a>
+
+                            <a href="#" class="navigation__list__item">
+                                <i class="ion-person"></i>
+                                <span>Artists</span>
+                            </a>
+
+                            <a href="#" class="navigation__list__item">
+                                <i class="ion-document"></i>
+                                <span>Local Files</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <!-- / -->
+
+                    <!-- Playlists -->
+                    <div class="navigation__list">
+
+                        <div class="navigation__list__header" role="button" data-toggle="collapse" href="#playlists"
+                            aria-expanded="true" aria-controls="playlists">
+                            Playlists
+                        </div>
+
+
+
+                    </div>
+                    <!-- / -->
+
+                </section>
+
+                <section class="playlist">
+
+                    <a href="#">
+
+                        <i class="ion-ios-plus-outline"></i>
+
+                        New Playlist
+
+                    </a>
+
+                </section>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="artist__navigation">
+
+
+
+                <div class="artist__navigation__friends">
+
+                    <a href="#">
+                        <img src="http://zblogged.com/wp-content/uploads/2015/11/17.jpg" alt="" />
+                    </a>
+
+                    <a href="#">
+                        <img src="http://zblogged.com/wp-content/uploads/2015/11/5.png" alt="" />
+                    </a>
+
+                    <a href="#">
+                        <img src="http://cdn.devilsworkshop.org/files/2013/01/enlarged-facebook-profile-picture.jpg"
+                            alt="" />
+                    </a>
+
+                </div>
+
+            </div>
+
+            </div> -->
+
+            <div class="artist__content">
+
+                <div class="tab-content">
+
+                    <!-- Overview -->
+                    <div role="tabpanel" class="tab-pane active" id="artist-overview">
+
+                        <div class="overview">
+
+                            <div class="overview__artist">
+
+                                <!-- Latest Release-->
+                                <div class="section-title">Latest Release</div>
+
+                                <div class="latest-release">
+
+                                    <div class="latest-release__art">
+
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg"
+                                            alt="When It's Dark Out" />
+
+                                    </div>
+
+                                    <div class="latest-release__song">
+
+                                        <div class="latest-release__song__title">Drifting (Track Commentary)</div>
+
+                                        <div class="latest-release__song__date">
+
+                                            <span class="day">4</span>
+
+                                            <span class="month">December</span>
+
+                                            <span class="year">2015</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- / -->
+
+                                <!-- Popular-->
+                                <div class="section-title">Popular</div>
+
+                                <div class="tracks">
+
+                                    <div class="track">
+
+                                        <div class="track__art">
+
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg"
+                                                alt="When It's Dark Out" />
+
+                                        </div>
+
+                                        <div class="track__number">1</div>
+
+                                        <div class="track__added">
+
+                                            <i class="ion-checkmark-round added"></i>
+
+                                        </div>
+
+                                        <div class="track__title">Me, Myself & I</div>
+
+                                        <div class="track__explicit">
+
+                                            <span class="label">Explicit</span>
+
+                                        </div>
+
+                                        <div class="track__plays">147,544,165</div>
+
+                                    </div>
+
+                                    <div class="track">
+
+                                        <div class="track__art">
+
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg"
+                                                alt="These Things Happen" />
+
+                                        </div>
+
+                                        <div class="track__number">2</div>
+
+                                        <div class="track__added">
+
+                                            <i class="ion-plus not-added"></i>
+
+                                        </div>
+
+                                        <div class="track__title">I Mean It</div>
+
+                                        <div class="track__explicit">
+
+                                            <span class="label">Explicit</span>
+
+                                        </div>
+
+                                        <div class="track__plays">74,568,782</div>
+
+                                    </div>
+
+                                    <div class="track">
+
+                                        <div class="track__art">
+
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg"
+                                                alt="When It's Dark Out" />
+
+                                        </div>
+
+                                        <div class="track__number">3</div>
+
+                                        <div class="track__added">
+
+                                            <i class="ion-checkmark-round added"></i>
+
+                                        </div>
+
+                                        <div class="track__title">Calm Down</div>
+
+                                        <div class="track__explicit">
+
+                                            <span class="label">Explicit</span>
+
+                                        </div>
+
+                                        <div class="track__plays">13,737,506</div>
+
+                                    </div>
+
+                                    <div class="track">
+
+                                        <div class="track__art">
+
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg"
+                                                alt="When It's Dark Out" />
+
+                                        </div>
+
+                                        <div class="track__number">4</div>
+
+                                        <div class="track__added">
+
+                                            <i class="ion-plus not-added"></i>
+
+                                        </div>
+
+                                        <div class="track__title">Some Kind Of Drug</div>
+
+                                        <div class="track__explicit">
+
+                                            <span class="label">Explicit</span>
+
+                                        </div>
+
+                                        <div class="track__plays">12,234,881</div>
+
+                                    </div>
+
+                                    <div class="track">
+
+                                        <div class="track__art">
+
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/tth.jpg"
+                                                alt="These Things Happen" />
+
+                                        </div>
+
+                                        <div class="track__number">5</div>
+
+                                        <div class="track__added">
+
+                                            <i class="ion-checkmark-round added"></i>
+
+                                        </div>
+
+                                        <div class="track__title">Let's Get Lost</div>
+
+                                        <div class="track__explicit">
+
+                                            <span class="label">Explicit</span>
+
+                                        </div>
+
+                                        <div class="track__plays">40,882,954</div>
+
+                                    </div>
+
+                                </div>
+
+                                <button class="show-more button-light">Show 5 More</button>
+                                <!-- / -->
+
+                            </div>
+
+
+
+                            <div class="overview__albums">
+
+                                <div class="overview__albums__head">
+
+                                    <span class="section-title">Albums</span>
+
+                                    <span class="view-type">
+
+                                        <i class="fa fa-list list active"></i>
+
+                                        <i class="fa fa-th-large card"></i>
+
+                                    </span>
+
+                                </div>
+
+                                <div class="album">
+
+                                    <div class="album__info">
+
+                                        <div class="album__info__art">
+
+                                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg"
+                                                alt="When It's Dark Out" />
+
+                                        </div>
+
+                                        <div class="album__info__meta">
+
+                                            <div class="album__year">2015</div>
+
+                                            <div class="album__name">When It's Dark Out</div>
+
+                                            <div class="album__actions">
+
+                                                <button class="button-light save">Save</button>
+
+                                                <button class="button-light more">
+                                                    <i class="ion-ios-more"></i>
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="album__tracks">
+
+                                        <div class="tracks">
+
+                                            <div class="tracks__heading">
+
+                                                <div class="tracks__heading__number">#</div>
+
+                                                <div class="tracks__heading__title">Song</div>
+
+                                                <div class="tracks__heading__length">
+
+                                                    <i class="ion-ios-stopwatch-outline"></i>
+
+                                                </div>
+
+                                                <div class="tracks__heading__popularity">
+
+                                                    <i class="ion-thumbsup"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">1</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title">Intro</div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">1:11</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">2</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title">Random</div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">3:00</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">3</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Me, Myself & I</span>
+                                                    <span class="feature">Bebe Rexha</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">4:11</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">4</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">One Of Them</span>
+                                                    <span class="feature">Big Sean</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">3:20</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-down-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">5</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Drifting</span>
+                                                    <span class="feature">Chris Brown</span>
+                                                    <span class="feature">Tory Lanez</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">4:33</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">6</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Of All Things</span>
+                                                    <span class="feature">Too $hort</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">3:34</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">7</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Order More</span>
+                                                    <span class="feature">Starrah</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">3:29</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">8</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title">
+
+                                                    <span>Calm Down</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">2:07</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">9</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-plus not-added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Don't Let Me Go</span>
+                                                    <span class="feature">Grace</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">3:11</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-down-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">10</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title">
+
+                                                    <span>You Got Me</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">3:28</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">11</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">What If</span>
+                                                    <span class="feature">Gizzle</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">4:13</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">12</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title">
+
+                                                    <span>Sad Boy</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">3:23</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">13</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Some Kind Of Drug</span>
+                                                    <span class="feature">Marc E. Bassy</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">3:42</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">14</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Think About You</span>
+                                                    <span class="feature">Quin</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">2:59</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">15</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Everything Will Be OK</span>
+                                                    <span class="feature">Kehlani</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">5:11</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">16</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">For This</span>
+                                                    <span class="feature">Iamnobodi</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">4:11</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="track">
+
+                                                <div class="track__number">17</div>
+
+                                                <div class="track__added">
+
+                                                    <i class="ion-checkmark-round added"></i>
+
+                                                </div>
+
+                                                <div class="track__title featured">
+
+                                                    <span class="title">Nothing to Me</span>
+                                                    <span class="feature">Keyshia Cole</span>
+                                                    <span class="feature">E-40</span>
+
+                                                </div>
+
+                                                <div class="track__explicit">
+
+                                                    <span class="label">Explicit</span>
+
+                                                </div>
+
+                                                <div class="track__length">5:30</div>
+
+                                                <div class="track__popularity">
+
+                                                    <i class="ion-arrow-graph-up-right"></i>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- / -->
+
+                    <!-- About // Coming Soon-->
+                    <!--<div role="tabpanel" class="tab-pane" id="artist-about">About</div>-->
+                    <!-- / -->
+
+                </div>
+
+            </div>
+
+            </div>
+
+            </div>
+
+            <div class="content__right">
+
+                <div class="social">
+
+                    <div class="friends">
+                        <b class="text-light"> Friends</b>
+
+                        <a href="#" class="friend">
+
+                            <i class="ion-android-person"></i>
+
+                            Sam Smith
+
+                        </a>
+
+                        <a href="#" class="friend">
+
+                            <i class="ion-android-person"></i>
+
+                            Tarah Forsyth
+
+                        </a>
+
+                        <a href="#" class="friend">
+
+                            <i class="ion-android-person"></i>
+
+                            Ricahrd Tomkins
+
+                        </a>
+
+                        <a href="#" class="friend">
+
+                            <i class="ion-android-person"></i>
+
+                            Tony Russo
+
+                        </a>
+
+                        <a href="#" class="friend">
+
+                            <i class="ion-android-person"></i>
+
+                            Alyssa Marist
+
+                        </a>
+
+                        <a href="#" class="friend">
+
+                            <i class="ion-android-person"></i>
+
+                            Ron Samson
+
+                        </a>
+
+                    </div>
+
+                    <button class="button-light">Find Friends</button>
+
+                </div>
+
+            </div>
+
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+
+
+    </body>
+
+    </html>
